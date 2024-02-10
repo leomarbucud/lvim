@@ -3,11 +3,11 @@
 -- Forum: https://www.reddit.com/r/lunarvim/
 -- Discord: https://discord.com/invite/Xb9B4Ny
 
-require 'user.alpha'
-require 'user.options'
-require 'user.colorscheme'
-require 'user.neovide'
-require 'user.keymaps'
-require 'user.plugins'
-require 'user.autocommands'
-require 'user.dap'
+reload 'user.alpha'
+reload 'user.options'
+reload 'user.colorscheme'
+reload 'user.neovide'
+reload 'user.keymaps'
+reload 'user.plugins'
+reload 'user.autocommands'
+reload 'user.dap'

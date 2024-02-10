@@ -13,27 +13,20 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +8 lua/user/options.lua
-badd +5 lua/user/colorscheme.lua
-badd +13 config.lua
-badd +8 lua/user/autocommands.lua
-badd +29 lua/user/keymaps.lua
-badd +19 lua/user/dap.lua
-badd +41 lua/user/plugins.lua
-badd +15 lua/user/alpha.lua
-badd +856 lv-settings.lua
+badd +18 ~/.config/lvim/lua/user/plugins.lua
+badd +6 ~/.config/lvim/lua/user/options.lua
+badd +11 ~/.config/lvim/lua/user/neovide.lua
 argglobal
 %argdel
-edit lua/user/plugins.lua
+edit ~/.config/lvim/lua/user/neovide.lua
 argglobal
-balt lua/user/alpha.lua
-let s:l = 40 - ((39 * winheight(0) + 35) / 70)
+balt ~/.config/lvim/lua/user/plugins.lua
+let s:l = 14 - ((13 * winheight(0) + 34) / 69)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 40
-normal! 093|
-lcd ~/.config/lvim
+keepjumps 14
+normal! 0
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
@@ -47,6 +40,7 @@ if filereadable(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
 set hlsearch
+nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :
