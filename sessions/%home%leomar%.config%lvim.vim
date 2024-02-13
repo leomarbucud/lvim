@@ -13,20 +13,23 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +18 ~/.config/lvim/lua/user/plugins.lua
-badd +6 ~/.config/lvim/lua/user/options.lua
-badd +11 ~/.config/lvim/lua/user/neovide.lua
+badd +18 lua/user/plugins.lua
+badd +5 config.lua
+badd +15 lua/user/dap.lua
+badd +3 ~/.config/lvim/.gitignore
+badd +1 ~/.config/lvim/lua/user/options.lua
+badd +15 ~/.config/lvim/lua/user/autocommands.lua
 argglobal
 %argdel
-edit ~/.config/lvim/lua/user/neovide.lua
+edit lua/user/plugins.lua
 argglobal
-balt ~/.config/lvim/lua/user/plugins.lua
-let s:l = 14 - ((13 * winheight(0) + 34) / 69)
+balt ~/.config/lvim/lua/user/autocommands.lua
+let s:l = 20 - ((19 * winheight(0) + 35) / 71)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 14
-normal! 0
+keepjumps 20
+normal! 04|
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
@@ -40,7 +43,6 @@ if filereadable(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
 set hlsearch
-nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :

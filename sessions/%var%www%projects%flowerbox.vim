@@ -13,21 +13,22 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +124 src/FlowerBox/ServicesBundle/Services/PinkReport/PinkReport.php
-badd +177 src/FlowerBox/ReportBundle/Resources/views/Pink/graph.html.twig
-badd +598 app/Resources/views/base.html.twig
-badd +77 health://
+badd +1327 src/FlowerBox/OrderBundle/Entity/Shipment.php
+badd +58 src/FlowerBox/OrganisationBundle/Command/LockExportDocsCommand.php
+badd +26 src/FlowerBox/ReportBundle/Lib/Service/Date.php
+badd +11 src/FlowerBox/ReportBundle/Lib/Enum/TimeZone.php
 argglobal
 %argdel
-edit src/FlowerBox/ServicesBundle/Services/PinkReport/PinkReport.php
+edit src/FlowerBox/OrganisationBundle/Command/LockExportDocsCommand.php
 argglobal
-balt src/FlowerBox/ReportBundle/Resources/views/Pink/graph.html.twig
-let s:l = 118 - ((11 * winheight(0) + 14) / 29)
+balt src/FlowerBox/ReportBundle/Lib/Service/Date.php
+let s:l = 58 - ((35 * winheight(0) + 35) / 71)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 118
-normal! 0
+keepjumps 58
+normal! 02|
+lcd /var/www/projects/flowerbox
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

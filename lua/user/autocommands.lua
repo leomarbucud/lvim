@@ -1,11 +1,11 @@
 lvim.autocommands = {
-    -- {
-    --     "BufRead",
-    --     {
-    --         pattern = { "*.twig" },
-    --         command = "set ft=jinja",
-    --     }
-    -- },
+    {
+        "BufWinEnter",
+        {
+            pattern = { "*.yml" },
+            command = "set shiftwidth=4",
+        }
+    },
     {
         "BufEnter",
         {

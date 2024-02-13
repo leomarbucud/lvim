@@ -23,3 +23,9 @@ lvim.keys.normal_mode["<Leader>r"] = ":lua require'persistence'.load()<CR>"
 
 -- php documentation
 lvim.keys.normal_mode["<C-p>"] = ":call pdv#DocumentWithSnip()<CR>"
+
+--tmux navigation
+lvim.keys.normal_home["<C-h>"] = ":TmuxNavigateLeft";
+lvim.keys.normal_home["<C-j>"] = ":TmuxNavigateDown";
+lvim.keys.normal_home["<C-k>"] = ":TmuxNavigateUp";
+lvim.keys.normal_home["<C-l>"] = ":TmuxNavigateRight";

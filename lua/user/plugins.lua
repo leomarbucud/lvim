@@ -14,5 +14,10 @@ lvim.plugins = {
     { "tobyS/vmustache" },
     { "tobyS/pdv" },
     { "SirVer/ultisnips" },
-    { "mg979/vim-visual-multi" }
+    { "mg979/vim-visual-multi" },
+    { "hiphish/rainbow-delimiters.nvim" },
+    {
+        "christoomey/vim-tmux-navigator",
+        lazy = false,
+    }
 }
