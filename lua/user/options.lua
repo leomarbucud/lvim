@@ -3,6 +3,7 @@ vim.opt.expandtab = true
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 -- vim.opt.softtabstop = 4
+vim.opt.wrap = false
 vim.opt.undofile = true
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
