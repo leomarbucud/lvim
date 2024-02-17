@@ -19,5 +19,17 @@ lvim.plugins = {
     {
         "christoomey/vim-tmux-navigator",
         lazy = false,
-    }
+    },
+    {
+        "simrat39/symbols-outline.nvim",
+        config = function()
+            require('symbols-outline').setup({
+                autofold_depth = 2,
+                width = 40,
+                relative_width = false,
+                auto_preview = false,
+                position = "right",
+            })
+        end
+    },
 }

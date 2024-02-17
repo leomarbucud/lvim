@@ -25,7 +25,10 @@ lvim.keys.normal_mode["<Leader>r"] = ":lua require'persistence'.load()<CR>"
 lvim.keys.normal_mode["<C-p>"] = ":call pdv#DocumentWithSnip()<CR>"
 
 --tmux navigation
-lvim.keys.normal_home["<C-h>"] = ":TmuxNavigateLeft";
-lvim.keys.normal_home["<C-j>"] = ":TmuxNavigateDown";
-lvim.keys.normal_home["<C-k>"] = ":TmuxNavigateUp";
-lvim.keys.normal_home["<C-l>"] = ":TmuxNavigateRight";
+lvim.keys.normal_mode["<C-h>"] = ":TmuxNavigateLeft";
+lvim.keys.normal_mode["<C-j>"] = ":TmuxNavigateDown";
+lvim.keys.normal_mode["<C-k>"] = ":TmuxNavigateUp";
+lvim.keys.normal_mode["<C-l>"] = ":TmuxNavigateRight";
+
+-- open code outline
+lvim.keys.normal_mode["<F3>"] = ":SymbolsOutline<CR>";

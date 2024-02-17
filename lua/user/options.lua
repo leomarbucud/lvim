@@ -15,3 +15,12 @@ vim.g.pdv_template_dir = home .. "/.local/share/nvim/site/pack/packer/start/pdv/
 
 -- transparent window
 lvim.transparent_window = true
+
+-- show full path in searching file
+lvim.builtin.telescope.defaults = {
+	find_command = { "fd", "-t=f", "-a" },
+	path_display = { "shorten" },
+    -- wrap_results = true
+}
+
+lvim.builtin.telescope.pickers.buffers.initial_mode = "insert"
