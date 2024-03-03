@@ -19,8 +19,11 @@ lvim.transparent_window = true
 -- show full path in searching file
 lvim.builtin.telescope.defaults = {
 	find_command = { "fd", "-t=f", "-a" },
-	path_display = { "shorten" },
-    -- wrap_results = true
+	path_display = { shorten = 1 },
 }
 
 lvim.builtin.telescope.pickers.buffers.initial_mode = "insert"
+
+-- bookmark options
+vim.g.bookmark_save_per_working_dir = 1;
+vim.g.bookmark_auto_save = 1;

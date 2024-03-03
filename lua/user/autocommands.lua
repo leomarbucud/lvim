@@ -7,7 +7,14 @@ lvim.autocommands = {
         }
     },
     {
-        "BufEnter",
+        "BufRead",
+        {
+            pattern = { "*.conf" },
+            command = "set ft=config",
+        }
+    },
+    {
+        "BufWinEnter",
         {
             command = "set nofixendofline"
         }
